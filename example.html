@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Page Website</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic styling for the sections */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* Styling for the navbar */
+.navbar {
+  background-color: #333;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul li {
+  margin-right: 20px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  background-color: #555;
+}
+
+/* Additional styles as needed */
+
+
+</style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact" class="contact-link">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="section">
+    <h1>Welcome to Our Website</h1>
+    <p>This is the home section of our one-page website.</p>
+    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section">
+    <h2>Our Services</h2>
+    <p>Here are the services we offer to our clients.</p>
+    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="section">
+    <h2>Portfolio</h2>
+    <p>Explore examples of our work in photography and design.</p>
+    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>
+    <!-- Your portfolio content here -->
+  </section>
+
+  <!-- Contact Us Section -->
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>Fill out the form below to get in touch with us.</p>
+    <form action="/submit-contact-form" method="POST">
+      <!-- Your contact form fields here -->
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- JavaScript for Smooth Scroll and Special Behavior for Contact Us Link -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navbarLinks = document.querySelectorAll('.navbar a[href^="#"]');
+      const contactLink = document.querySelector('.navbar .contact-link');
+
+      // Smooth scroll behavior for all navbar links
+      navbarLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+          scrollToElement(targetElement);
+        });
+      });
+
+      // Special behavior for Contact Us link
+      contactLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        const homeSection = document.getElementById('home');
+        scrollToElement(homeSection);
+      });
+
+      function scrollToElement(element) {
+        window.scrollTo({
+          top: element.offsetTop - 50, // Adjusted offset if you have a fixed navbar
+          behavior: 'smooth'
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
+
+
