@@ -19,47 +19,8 @@
     <link rel="stylesheet" href="Icons/all.css">
     <script src="https://kit.fontawesome.com/cf24d7d883.js" crossorigin="anonymous"></script>
 
-    <style>
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-        }
-
-        .carousel,
-        .carousel-item {
-            height: 100vh;
-        }
-
-        .carousel-item img {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-            min-width: 100%;
-            min-height: 100%;
-        }
 
 
-
-        @media (max-width: 768px) {
-            .carousel-caption {
-                bottom: 20%;
-            }
-
-            .carousel-caption h5 {
-                font-size: 1.5rem;
-            }
-
-            .carousel-caption p {
-                font-size: 1rem;
-            }
-
-            .carousel-caption .btn {
-                font-size: 1rem;
-                padding: 0.5rem 1rem;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -148,92 +109,107 @@
         </button>
     </div>
 
-    </div>
-    <div class="homeDivider reveal">
-        <div class="aboutUs container-fluid">
-            <div id=aboutUsHeader>
-                <div class="section-head">
-                    <h4><span>About Me</span></h4>
-                </div>
-            </div>
-            <div id=aboutUsSec>
-                <p>Hi! I am Nicholas a skilled photographer based in Malta, specializing in
-                    Automotive, Motorsport, and Sports photography. Through my lens, I capture captivating moments that
-                    tell
-                    compelling stories. With a keen eye for detail and a passion for my craft, I strive to deliver
-                    visually
-                    stunning imagery that leaves a lasting impact. Feel free to explore the Services page to discover
-                    how I can help capture your special moments or showcase your automotive or sports-related projects.
-                    I look forward to working with you to create visually captivating memories.</p>
-                <img src=/Images/profile.webp alt>
+    <div class="aboutUs container-fluid reveal">
+        <div id=aboutUsHeader>
+            <div class="section-head">
+                <h4><span>About Me</span></h4>
             </div>
         </div>
+        <div id=aboutUsSec>
+            <p>Hi! I am Nicholas a skilled photographer based in Malta, specializing in
+                Automotive, Motorsport, and Sports photography. Through my lens, I capture captivating moments that
+                tell
+                compelling stories. With a keen eye for detail and a passion for my craft, I strive to deliver
+                visually
+                stunning imagery that leaves a lasting impact. Feel free to explore the Services page to discover
+                how I can help capture your special moments or showcase your automotive or sports-related projects.
+                I look forward to working with you to create visually captivating memories.</p>
+            <img src=/Images/profile.webp alt>
+        </div>
+    </div>
 
+    <div class="container-fluid reveal" style="padding-left: 10%; padding-right: 10%; padding-top: 5%;">
 
-        <div class="pt-5 pb-5 reveal">
-            <div class="container-fluid" style="padding-left: 10%; padding-right: 10%;">
-                <div class="row">
-                    <div class="section-head col-sm-12">
-                        <h4><span>Our Services</span></h4>
-                        <p>Explore our range of photography services, specializing in automotive shoots, sports
-                            photography,<br> event coverage, and motorsport action.</p>
+        <div class="section-head">
+            <h4><span>Our Services</span></h4>
+        </div>
+        <div class="services-center">
+            <div class="services-slider">
+                <div class="services-cards">
+                    <div class="services-card">
+                        <a href="photo_portfolio/automotive.html">
+                            <img src="Images/Work-Images/Services-1.jpg" alt="">
+                            <div class="services-card-text">
+                                <div class="title">Automotive</div>
+                                <div class="subtitle">Photography</div>
+                                <span><i class="fa-solid fa-arrow-right"></i></span>
+                        </a>
                     </div>
-
-
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="item"> <span class="icon feature_box_col_one"><i class="fa-solid fa-car"></i></span>
-                            <h6>Automotive Photography</h6>
-                            <p>Capture the beauty and uniqueness of vehicles through stunning photoshoots.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="item"> <span class="icon feature_box_col_two"><i
-                                    class="fa-solid fa-wine-glass-empty"></i></span>
-                            <h6>Event Photography</h6>
-                            <p>Document special occasions with candid moments and detailed atmosphere shots.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="item"> <span class="icon feature_box_col_three"><i
-                                    class="fa-solid fa-flag-checkered"></i></span>
-                            <h6>Motorsport Events Coverage</h6>
-                            <p>Capture the adrenaline and excitement of motorsport races and events.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="item"> <span class="icon feature_box_col_four"><i
-                                    class="fa-solid fa-people-group"></i></span>
-                            <h6>Motorsport Team Photographer</h6>
-                            <p>Highlight team dynamics and behind-the-scenes moments for motorsport teams.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="item"> <span class="icon feature_box_col_five"><i
-                                    class="fa-solid fa-futbol"></i></span>
-                            <h6>Sports Team Photographer</h6>
-                            <p>Provide professional photography services for sports clubs and teams.</p> <br>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-sm-6">
-                        <a style="text-decoration: none; color: black;" href="contactUs.html">
-                        <div class="item"> <span class="icon feature_box_col_six"><i
-                                    class="fa-regular fa-newspaper"></i></span>
-                            <h6>Sports Photojournalism</h6>
-                            <p>Tell compelling stories through sports events coverage with a journalistic approach.</p>
-                        </div>
+                </div>
+                <div class="services-card">
+                    <a href="photo_portfolio/events.html">
+                        <img src="Images/Work-Images/Services-2.jpg" alt="">
+                        <div class="services-card-text">
+                            <div class="title">Event</div>
+                            <div class="subtitle">Photography</div>
+                            <span><i class="fa-solid fa-arrow-right"></i></span>
                     </a>
-                    </div>
                 </div>
             </div>
-        </div>
+            <div class="services-cards">
+                <div class="services-card">
+                    <a href="photo_portfolio/motorsport.html">
+                        <img src="Images/Work-Images/Services-3.jpg" alt="">
+                        <div class="services-card-text">
+                            <div class="title">Motorsport</div>
+                            <div class="subtitle">Photography</div>
+                            <span><i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
 
+            <div class="services-card">
+                <a href="photo_portfolio/sports.html">
+                    <img src="Images/Work-Images/Services-4.jpg" alt="">
+                    <div class="services-card-text">
+                        <div class="title">Sports</div>
+                        <div class="subtitle">Photography</div>
+                        <span><i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+            </div>
+        </div>
+        <div class="services-card">
+            <a href="press.html">
+                <img src="Images/Work-Images/Services-5.jpg" alt="">
+                <div class="services-card-text">
+                    <div class="title">Photo</div>
+                    <div class="subtitle">Journalism</div>
+                    <span><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+        </div>
+    </div>
+    <!-- <div class="services-card">
+                <img src="Images/Work-Images/Services-6.jpg" alt="">
+                <div class="services-card-text">
+                    <div class="title">UI</div>
+                    <div class="subtitle">Design</div>
+                    <span><i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </div> -->
+    <!-- <div class="services-card">
+                <img src="Images/Work-Images/Services-1.jpg" alt="">
+                <div class="services-card-text">
+                    <div class="title">Theme Creation</div>
+                    <div class="subtitle">WordPress</div>
+                    <span><i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </div> -->
     </div>
     </div>
+    </div>
+    </div>
+
+
 
     <!--Footer-->
     <div class=container>
@@ -270,138 +246,3 @@
 </body>
 
 </html>
-
-<style>
-    span {
-        display: inline-block;
-        text-decoration: none;
-        color: inherit;
-    }
-
-    .section-head {
-        margin-bottom: 30px;
-    }
-
-    .section-head h4 {
-        position: relative;
-        padding: 0;
-        color: #f91942;
-        line-height: 1;
-        letter-spacing: 0.3px;
-        font-size: 34px;
-        font-weight: 700;
-        text-align: center;
-        text-transform: none;
-        margin-bottom: 30px;
-    }
-
-    .section-head h4::before {
-        content: '';
-        width: 60px;
-        height: 3px;
-        background: #214559;
-        position: absolute;
-        bottom: -10px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-    }
-
-    .section-head h4 span {
-        font-weight: 700;
-        padding-bottom: 5px;
-        color: #2f2f2f;
-    }
-
-    .section-head p {
-        color: black;
-        font-size: 18px;
-        line-height: 28px;
-        text-align: center;
-    }
-
-    .item {
-        background: #fff;
-        text-align: center;
-        padding: 30px 25px;
-        box-shadow: 0 0 25px rgba(0, 0, 0, 0.07);
-        border-radius: 20px;
-        margin-bottom: 30px;
-        border: 5px solid rgba(0, 0, 0, 0.07);
-        -webkit-transition: all 0.5s ease 0s;
-        transition: all 0.5s ease 0s;
-    }
-
-    .item:hover {
-        background: #214559;
-        box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
-        -webkit-transition: all 0.5s ease 0s;
-        transition: all 0.5s ease 0s;
-    }
-
-    .item:hover .item,
-    .item:hover span.icon {
-        background: #fff;
-        border-radius: 10px;
-        -webkit-transition: all 0.5s ease 0s;
-        transition: all 0.5s ease 0s;
-    }
-
-    .item:hover h6,
-    .item:hover p {
-        color: #fff;
-        -webkit-transition: all 0.5s ease 0s;
-        transition: all 0.5s ease 0s;
-    }
-
-    .item .icon {
-        font-size: 40px;
-        margin-bottom: 25px;
-
-        width: 90px;
-        height: 90px;
-        line-height: 96px;
-        border-radius: 50px;
-    }
-
-    .item .feature_box_col_one {
-        background: #E5E5E5;
-        color: #214559;
-    }
-
-    .item .feature_box_col_two {
-        background: #E5E5E5;
-        color: #214559;
-    }
-
-    .item .feature_box_col_three {
-        background: #E5E5E5;
-        color: #214559;
-    }
-
-    .item .feature_box_col_four {
-        background: #E5E5E5;
-        color: #214559;
-    }
-
-    .item .feature_box_col_five {
-        background: #E5E5E5;
-        color: #214559;
-    }
-
-    .item .feature_box_col_six {
-        background: #E5E5E5;
-        color: #214559;
-    }
-
-    .item p {
-        font-size: 16px;
-        line-height: 26px;
-    }
-
-    .item h6 {
-        margin-bottom: 20px;
-        color: #2f2f2f;
-        font-weight: bold;
-    }
-</style>
