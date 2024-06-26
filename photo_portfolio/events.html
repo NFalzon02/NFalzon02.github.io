@@ -25,13 +25,6 @@
 </head>
 
 
-<!-- Messenger Chat Plugin Code -->
-<div id="fb-root"></div>
-
-<!-- Your Chat Plugin code -->
-<div id="fb-customer-chat" class="fb-customerchat">
-</div>
-
 <!--Logos-->
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="facebook" viewBox="0 0 16 16">
@@ -46,10 +39,10 @@
 </svg>
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="../index.html">Nicholas Falzon</a> <button
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-            class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse"
-            type="button"><span class="navbar-toggler-icon"></span></button>
+        <a class="navbar-brand" href="../index.html">Nicholas Falzon</a> <button aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+            data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span
+                class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
@@ -97,7 +90,7 @@
     <h3>Event Photography</h3>
 </div>
 
- <div class="photo-gallery">
+<div class="photo-gallery">
 
 
     <div class="container-fluid" style="max-width: 90%">
@@ -211,7 +204,7 @@
 
         <!-- Add more rows and repeat the column structure for other photos -->
     </div>
-</div> 
+</div>
 
 
 
@@ -220,7 +213,9 @@
 <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <div class="col-md-4 d-flex align-items-center">
-            <p><span class=text-muted>&copy; <script>document.write( new Date().getFullYear() );</script> NF Photography</span></p>
+            <p><span class=text-muted>&copy;
+                    <script>document.write(new Date().getFullYear());</script> NF Photography
+                </span></p>
         </div>
 
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
@@ -235,33 +230,6 @@
         </ul>
     </footer>
 </div>
-
-<script>
-    var chatbox = document.getElementById('fb-customer-chat');
-    chatbox.setAttribute("page_id", "101492458371339");
-    chatbox.setAttribute("attribution", "biz_inbox");
-</script>
-
-<script>
-    window.fbAsyncInit = function () {
-        FB.init({
-            xfbml: true,
-            version: 'v13.0'
-        });
-    };
-
-    (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-</script>
-
-
-
-
 
 </body>
 
