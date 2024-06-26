@@ -4,7 +4,7 @@
 <head>
   <meta charset=UTF-8>
   <meta name=viewport content="width=device-width, initial-scale=1.0">
-  <title>Test 1</title>
+  <title>Test 1.5</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel=stylesheet>
   <link href=https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css rel=stylesheet>
   <link href=https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css rel=stylesheet>
@@ -252,27 +252,26 @@
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-      const loaderWrapper = document.getElementById('loader-wrapper');
-      const content = document.getElementById('loading-page-content');
+  window.onload = function() {
+    const loaderWrapper = document.getElementById('loader-wrapper');
+    const content = document.getElementById('loading-page-content');
 
-      // Measure page load time
-      const loadTime = window.performance.timing.loadEventEnd - window.performance.timing.navigationStart;
-      
-      // Animate SVG outline based on load time
-      gsap.fromTo(
-        "#animated-path",
-        { drawSVG: "0%" },
-        {
-          drawSVG: "100%",
-          duration: loadTime / 1000, // Convert milliseconds to seconds
-          onComplete: () => {
-            // Hide the loader and show the content
-            loaderWrapper.style.display = 'none';
-            content.style.display = 'block';
-          }
+    // Measure page load time
+    const loadTime = window.performance.timing.loadEventEnd - window.performance.timing.navigationStart;
+    
+    // Animate SVG outline based on load time
+    gsap.fromTo(
+      "#animated-path",
+      { drawSVG: "0%" },
+      {
+        drawSVG: "100%",
+        duration: loadTime / 1000, // Convert milliseconds to seconds
+        onComplete: () => {
+          // Hide the loader and show the content
+          loaderWrapper.style.display = 'none';
+          content.style.display = 'block';
         }
-      );
-    });
-
+      }
+    );
+  };
 </script>
