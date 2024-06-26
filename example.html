@@ -252,45 +252,27 @@
 </style>
 
 <script>
-  // script.js
-
 document.addEventListener('DOMContentLoaded', function() {
-  const loaderWrapper = document.getElementById('loader-wrapper');
-  const content = document.getElementById('loading-page-content');
+      const loaderWrapper = document.getElementById('loader-wrapper');
+      const content = document.getElementById('loading-page-content');
 
-  window.addEventListener('load', function() {
-
-    // Hide the loader and show the content
-    setTimeout(() => {
-      loaderWrapper.style.display = 'none';
-      content.style.display = 'block';
-    }, 500); // Delay to ensure smooth transition
-  });
-});
-
-gsap.fromTo(
-  ".loading-page",
-  { opacity: 1 },
-  {
-    opacity: 0,
-    display: "none",
-    duration: 1.5,
-    delay: 3.5,
-  }
-);
-
-gsap.fromTo(
-  ".logo-name",
-  {
-    y: 50,
-    opacity: 0,
-  },
-  {
-    y: 0,
-    opacity: 1,
-    duration: 2,
-    delay: 0.5,
-  }
-);
+      // Measure page load time
+      const loadTime = window.performance.timing.loadEventEnd - window.performance.timing.navigationStart;
+      
+      // Animate SVG outline based on load time
+      gsap.fromTo(
+        "#animated-path",
+        { drawSVG: "0%" },
+        {
+          drawSVG: "100%",
+          duration: loadTime / 1000, // Convert milliseconds to seconds
+          onComplete: () => {
+            // Hide the loader and show the content
+            loaderWrapper.style.display = 'none';
+            content.style.display = 'block';
+          }
+        }
+      );
+    });
 
 </script>
