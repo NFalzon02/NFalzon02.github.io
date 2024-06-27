@@ -26,8 +26,62 @@
 	padding-bottom: 30px;
 }
 
+
+
+  .section {
+    text-align: center;
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .card {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    flex: 1;
+    max-width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .section-head p {
+    color: black;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+  }
+
+  .portfolio-section {
+    display: none;
+    margin-top: 40px;
+  }
+
+  .portfolio-section.active {
+    display: block;
+  }
+
+
 @media(max-width:768px){
   .photo-gallery{
     flex-direction: column;
   }
+
+  .card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 50px;
 }
+}
+
