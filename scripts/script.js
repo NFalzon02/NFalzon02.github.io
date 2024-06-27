@@ -63,15 +63,11 @@ window.addEventListener('load', () => {
             animationsCompleted++;
             if (animationsCompleted === logo.length) {
                 preload.classList.add('preload-finish');
+                mainContent.classList.add('show');
+                document.body.style.overflow = 'auto'; // Re-enable scrolling
             }
         });
     });
-
-    preload.addEventListener('transitionend', () => {
-        if (preload.classList.contains('preload-finish')) {
-            mainContent.classList.add('show');
-            document.body.style.overflow = 'auto'; // Re-enable scrolling
-        }
-    });
 });
+
 
