@@ -749,6 +749,16 @@ body {
 		width: 100%;
 	}
 
+	.navbar-nav {
+		display: flex;
+		flex-direction: column;
+		padding-left: 0;
+		margin-bottom: 0;
+		list-style: none;
+		align-items: center !important;
+		text-align: center;
+	}
+
 	.card {
 		margin-bottom: 30px;
 	}
@@ -812,10 +822,17 @@ body {
 		text-align: center;
 	}
 
-
-
-
 	.navbar-nav {
+		display: flex;
+		flex-direction: column;
+		padding-left: 0;
+		margin-bottom: 0;
+		list-style: none;
+		align-items: center !important;
+		text-align: center;
+	}
+
+	.nav-link{
 		text-align: center;
 	}
 
