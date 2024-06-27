@@ -24,7 +24,7 @@
 
 <body>
     <div class="preload">
-        <svg id="logo" width="349.5" height="748" viewBox="0 0 699 748" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg id="logo" width="250" height="748" viewBox="0 0 699 748" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M2.5 647.21V2.5H34.9L651.53 587.81V661.25H588.89L96.45 181.77V648.29L2.5 647.21Z" stroke="black"
                 stroke-width="5" stroke-miterlimit="10" />
             <path d="M284.36 155.85V2.5H651.53L695.38 50.64L651.53 97.53H372.91V240.08L284.36 155.85Z" stroke="black"
@@ -34,6 +34,7 @@
             <path d="M651.53 342.81L695.38 295.91L651.53 247.78H382.14L483.7 342.68L651.53 342.81Z" stroke="black"
                 stroke-width="5" stroke-miterlimit="10" />
         </svg>
+        
     </div>
     <div class="main-content">
         <!-- Your existing site content here -->
@@ -241,125 +242,5 @@
 
 </html>
 
-<style>
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
-body {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden; /* Prevent scrolling during preload */
-}
 
-#logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: fill 1s ease forwards 2.5s;
-}
-
-#logo path:nth-child(1) {
-    stroke-dasharray: 2911.167236328125;
-    stroke-dashoffset: 2911.167236328125;
-    animation: line-anim 2s ease forwards;
-}
-
-#logo path:nth-child(2) {
-    stroke-dasharray: 1193.218505859375;
-    stroke-dashoffset: 1193.218505859375;
-    animation: line-anim 2s ease forwards 0.4s;
-}
-
-#logo path:nth-child(3) {
-    stroke-dasharray: 731.8433837890625;
-    stroke-dashoffset: 731.8433837890625;
-    animation: line-anim 2s ease forwards 0.4s;
-}
-
-#logo path:nth-child(4) {
-    stroke-dasharray: 705.5343017578125;
-    stroke-dashoffset: 705.5343017578125;
-    animation: line-anim 2s ease forwards 0.4s;
-}
-
-@keyframes line-anim {
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes fill {
-    from {
-        fill: transparent;
-    }
-    to {
-        fill: black;
-    }
-}
-
-.preload {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.5s ease;
-}
-
-.preload-finish {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.main-content {
-    display: none; /* Hide main content initially */
-}
-
-.main-content.show {
-    display: block;
-}
-
-</style>
-
-<script>
-
-document.addEventListener("DOMContentLoaded", function () {
-    const logo = document.querySelectorAll('#logo path');
-    console.log(logo);
-    for (let i = 0; i < logo.length; i++) {
-        console.log(`Letter ${i} is ${logo[i].getTotalLength()}`);
-    }
-});
-
-window.addEventListener('load', () => {
-    const logo = document.querySelectorAll('#logo path');
-    let animationsCompleted = 0;
-    const preload = document.querySelector('.preload');
-    const mainContent = document.querySelector('.main-content');
-
-    logo.forEach((path, index) => {
-        path.addEventListener('animationend', () => {
-            animationsCompleted++;
-            if (animationsCompleted === logo.length) {
-                preload.classList.add('preload-finish');
-            }
-        });
-    });
-
-    preload.addEventListener('transitionend', () => {
-        if (preload.classList.contains('preload-finish')) {
-            mainContent.classList.add('show');
-            document.body.style.overflow = 'auto'; // Re-enable scrolling
-        }
-    });
-});
-
-</script>
