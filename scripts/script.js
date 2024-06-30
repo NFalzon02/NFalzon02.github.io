@@ -58,7 +58,7 @@ window.addEventListener('load', () => {
     const mainContent = document.querySelector('.main-content');
 
     // Total animation duration = longest animation time + delay
-    const totalAnimationDuration = 3000; // 2s animation + 1s delay
+    const totalAnimationDuration = 2000; // 2s animation + 1s delay
 
     setTimeout(() => {
         preload.classList.add('preload-finish');
