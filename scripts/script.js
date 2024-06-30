@@ -57,27 +57,14 @@ window.addEventListener('load', () => {
     const preload = document.querySelector('.preload');
     const mainContent = document.querySelector('.main-content');
 
-    let animationsCompleted = 0;
+    // Total animation duration = longest animation time + delay
+    const totalAnimationDuration = 3000; // 2s animation + 1s delay
 
-    logo.forEach((path, index) => {
-        path.addEventListener('animationend', () => {
-            animationsCompleted++;
-            if (animationsCompleted === logo.length) {
-                preload.classList.add('preload-finish');
-                mainContent.classList.add('show');
-                document.body.style.overflow = 'auto'; // Re-enable scrolling
-            }
-        });
-    });
-
-    // Fallback in case animations don't fire
     setTimeout(() => {
-        if (!mainContent.classList.contains('show')) {
-            preload.classList.add('preload-finish');
-            mainContent.classList.add('show');
-            document.body.style.overflow = 'auto'; // Re-enable scrolling
-        }
-    }, 5000); // Adjust timeout as needed
+        preload.classList.add('preload-finish');
+        mainContent.classList.add('show');
+        document.body.style.overflow = 'auto'; // Re-enable scrolling
+    }, totalAnimationDuration);
 });
 
 
