@@ -54,9 +54,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 window.addEventListener('load', () => {
     const logo = document.querySelectorAll('#logo path');
-    let animationsCompleted = 0;
     const preload = document.querySelector('.preload');
     const mainContent = document.querySelector('.main-content');
+
+    let animationsCompleted = 0;
 
     logo.forEach((path, index) => {
         path.addEventListener('animationend', () => {
@@ -68,6 +69,15 @@ window.addEventListener('load', () => {
             }
         });
     });
+
+    // Fallback in case animations don't fire
+    setTimeout(() => {
+        if (!mainContent.classList.contains('show')) {
+            preload.classList.add('preload-finish');
+            mainContent.classList.add('show');
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+    }, 5000); // Adjust timeout as needed
 });
 
 
