@@ -28,6 +28,7 @@
 
 
 
+
   .section {
     text-align: center;
   }
@@ -60,7 +61,10 @@
     font-size: 18px;
     line-height: 28px;
     text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
   }
+
 
   .portfolio-section {
     display: none;
