@@ -727,6 +727,17 @@ hr {
 	display: block;
 }
 
+.container-LH{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+
+}
+
+.container-text .image img{
+	height: 100px
+}
+
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 	.carousel-caption {
